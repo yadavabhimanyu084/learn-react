@@ -4,6 +4,8 @@
   "description": "This is for learning react from scratch",
   "main": "app.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -27,8 +29,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "browserlist":[
+  "browserlist": [
     "last 2 versions"
   ]
-  
 }

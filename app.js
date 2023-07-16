@@ -1,14 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-//const heading = React.createElement("h1", { id: "heading" }, "Hello world from react!!!");
-const parent = React.createElement("div", { id: "parent" },
-    React.createElement("div", { id: "child1" }, [
-        React.createElement("h1", {id: "child1-1"}, "Nested h1 tag change it"),
-        React.createElement("h2", {id: "child1-2"}, "Nested h2 tag change it"),
-    ]),
-    React.createElement("div", { id: "child2" }, [
-        React.createElement("h1", {id: "child2-1"}, "Nested h1 tag, change it"),
-        React.createElement("h2", {id: "child2-2"}, "Nested h2 tag"),
-    ]));
+
+const number = 10000;
+const Title = () => <h1 className="head"> Learn React using JSX</h1>;
+
+const HeadingComponent = () => (
+  <React.Fragment>
+    <div id="container">
+      <h2>
+        {number} --- {100 + 2636}
+      </h2>
+      {console.log("number  ", number)}
+      <Title />
+      <h1 className="heading"> Learn React Functionl Component</h1>
+    </div>
+    <div id="container2"></div>
+  </React.Fragment>
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent); 
+root.render(<HeadingComponent />);
