@@ -47,3 +47,14 @@
 .res-logo {
   width: 100%;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.search,
+.filter-btn {
+  margin-right: 10px; /* Optional: Add some spacing between the elements */
+  cursor: pointer;
+}

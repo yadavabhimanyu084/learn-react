@@ -1,15 +1,22 @@
-import { REST_IMG_URL } from "../utils/contants";
+import { CDN_URL } from "../utils/contants";
 
 const RestaurantCart = (props) => {
     const { resData } = props;
-    const { name, cuisines, avgRating, mindeliveryTime } = resData;
-  
+    console.log("resData ==>", resData);
+    console.log("cloudinaryImageId ==>", CDN_URL + resData.cloudinaryImageId);
+    console.log("name ==>", resData.name);
+    console.log("cuisines ==>", resData.cuisines);
+    console.log("avgRating ==>", resData.avgRating);
+    console.log("mindeliveryTime ==>", resData.mindeliveryTime);
+    const { cloudinaryImageId, name, cuisines, avgRating, mindeliveryTime } = resData.info;
+    
+    //var joinedCuisines = cuisines.join(", ");
     return (
       <div className="res-card" style={{background: "#f0f0f0"}}>
         <img
           className="res-logo"
           alt="rice bowl"
-          src={REST_IMG_URL}
+          src={CDN_URL + cloudinaryImageId}
         />
         <h3>{name}</h3>
         <h4>{cuisines.join(", ")}</h4>
